@@ -6,10 +6,14 @@ body {
 
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 260;
+  font-weight: 350;
   font-style: normal;
 
-  background-color: rgb(225,221,217);
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(to bottom, rgb(225,221,217) 0%, rgb(178,186,223) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* ⬆⬆⬆⬆ Nav Bar Styling 
 ~~~~~ Taken From: 
@@ -23,6 +27,7 @@ ul {
   top: 0;
   width: 100%;
   z-index: 999;
+  background-color: rgb(22,34,52);
 }
 
 li {
@@ -31,18 +36,19 @@ li {
 
 li a {
   display: block;
-  color: rgb(22,34,52);
+  color: rgb(225,221,217);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover:not(.active) {
-  background-color: rgb(178,186,223);
+  color: rgb(178,186,223);
+  text-decoration: underline;
 }
 
 .active {
-  background-color:rgb(100,120,235);
+  color:rgb(100,120,235);
 }
 
 h1 {
