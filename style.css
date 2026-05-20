@@ -44,7 +44,6 @@ li a {
 
 li a:hover:not(.active) {
   color: rgb(178,186,223);
-  text-decoration: underline;
 }
 
 .active {
