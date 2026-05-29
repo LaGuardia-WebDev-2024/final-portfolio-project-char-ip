@@ -11,7 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-
+  <style>
+    img {
+        width: 400px;
+        height: 280px;
+        object-fit: cover;
+        object-position: 25% 15%;
+      }
+  </style>
    
   </head>
   <body>
@@ -43,8 +50,92 @@
       <P>HEY HEY HEYY??????</P>
     </div>
 
+    <div class="pagecontent">
+      <!--image1 =========================================================== -->
+      <div class="pieceandcaption">
+        <a
+          data-lightbox="gallery"
+          data-title="Acrylic paint, canvas on wood plank, 4'' x 11''"
+          href="images/2025_WebDevLogo_transpYear.png"
+          ><img
+            src="images/2025_WebDevLogo_transpYear.png"
+            width="400px"
+            style="object-position: 25% 35%"
+        /></a>
+        <p>
+          <i>Bonnie Bell, Lentils, and Angus </i>, Painting (2023)
+        </p>
+      </div>
+
+      <!--image2 =================================================================-->
+      <div class="pieceandcaption">
+        <a
+          href="images/2024_WebDevLogo_transpYear.png.PNG"
+          data-lightbox="gallery"
+          data-title="Acrylic paint on canvas 20'' x 16''"
+          data-gallery="[&quot;https://marketplace.canva.com/EAFA7HcvCvU/1/0/1600w/canva-blue-white-abstract-color-and-style-video-background-5WjVzool7kE.jpg&quot;, &quot;https://tinyurl.com/5eku6nwd&quot;]"
+        >
+          <img 
+            src="images/2024_WebDevLogo_transpYear.png.PNG"
+            width="400px"
+          />
+        </a>
+        <p>
+          <i>Portrait of Nana </i>, Painting (2022)
+        </p>
+      </div>
+
+      <!--image3 =-================================================================-->
+      <div class="pieceandcaption">
+        <a
+          data-lightbox="gallery"
+          data-title="Acrylic paint on board 4'' x 6''"
+          href="images/2023_WebDevLogo_transpYear (1).PNG"
+        >
+          <img
+            src="images/2023_WebDevLogo_transpYear (1).PNG"
+            width="400px"
+          />
+        </a>
+        <p>
+          Value experiment with unmixed limited palette, Painting (2022)
+        </p>
+      </div>
+    
+
+
+
+    <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="index.js"> </script>
+
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 27) {
+            $(".navbarcontainer").addClass("scrolled");
+          } else {
+            $(".navbarcontainer").removeClass("scrolled");
+          }
+        });
+      });
+      
+      const images = [
+            "https://www.calliaweb.co.uk/wp-content/uploads/2015/10/600x900.jpg",
+            "https://roelfjan.github.io/object-fit-cover/example-images/example1@1200x600.jpg","https://www.calliaweb.co.uk/wp-content/uploads/2015/10/450x300.jpg"
+        ];
+
+        let currentIndex = 0;
+
+        const imgElement = document.getElementById("switchImage");
+
+        imgElement.addEventListener("click", function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            imgElement.src = images[currentIndex];
+        });
+    </script>
+
 
   </body>
 </html>
