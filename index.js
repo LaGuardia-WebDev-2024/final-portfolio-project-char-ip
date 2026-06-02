@@ -12,6 +12,34 @@
  *
  * @preserve
  */
+
+
+$(document).ready(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 27) {
+            $(".navbarcontainer").addClass("scrolled");
+          } else {
+            $(".navbarcontainer").removeClass("scrolled");
+          }
+        });
+      });
+      
+      const images = [
+            "https://www.calliaweb.co.uk/wp-content/uploads/2015/10/600x900.jpg",
+            "https://roelfjan.github.io/object-fit-cover/example-images/example1@1200x600.jpg","https://www.calliaweb.co.uk/wp-content/uploads/2015/10/450x300.jpg"
+        ];
+
+        let currentIndex = 0;
+
+        const imgElement = document.getElementById("switchImage");
+
+        imgElement.addEventListener("click", function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            imgElement.src = images[currentIndex];
+        });
+
+// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
 !(function (a, b) {
   "function" == typeof define && define.amd
     ? define(["jquery"], b)
