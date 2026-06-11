@@ -17,7 +17,7 @@ Select ONE Additional Feature to Add
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Final Portfolio Project</title>
+    <title>Final Project - About Me</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,100 +26,110 @@ Select ONE Additional Feature to Add
 
 
     <style>
-      
       /* Styling Only Related To THIS Page */
-      /*~~~~~ Taken From:
-      https://www.w3schools.com/howto/howto_css_parallax.asp*/
-      .parallax {
-        /* The image used */
-        background-image: url("https://64.media.tumblr.com/21bf673c522b1cb1ab7925a1d97686f8/e730a74b8d28fd4f-69/s1280x1920/a2651eb4b3043e5106ad889919845aa5939a9e66.png");
-
-        /* Set a specific height */
-        min-height: 500px;
-
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+      html {
+        height: 100%;
       }
-   
-      .child-flex {
-        background-color:  rgb(22,34,52);
-        margin: 30px;
-        margin-left:60px;
-        margin-right: 60px;
-        text-align: justify;
-        padding:10px;
-      }
-      .para-1{
+
+      body {
         display: flex;
+      }
+
+      .parent-flex {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 50vh;
         align-items: center;
+        justify-content: center;
       }
 
-      a img {
-        margin-bottom: -4px;
-        width: 100%;
-        opacity: 0.8;
+      .parent-flex img {
+        width: 300px;
+        margin-top: 70px;
+      }
+      .child-flex {
+        padding: 1px;
       }
 
+      .child-flex a {
+        text-decoration: none;
+        color: rgb(22,34,52);
+      }
+
+      /* =========================================================*/
+
+     .carousel {
+      width: 90vh;
+      height: 98vh;
+      display: flex;
+      overflow-Y:auto;
+      gap: 1em;
+      pointer-events:none;
+     }
+     .carousel::-webkit-scrollbar{
+      display:none;
+     }
+     .group {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      animation: spin 50s infinite linear;
+     }
+
+     .group img {
+      width: 90vh;
+      margin:1;
+     }
+     
+     @keyframes spin{
+      from{transform: translateY(0);}
+      to {transform: translateY(-8000px);}
+     }
 
     </style>
   </head>
   <body>
-    <!-- ⬆⬆⬆⬆ Nav Bar -->
-    <ul>
-      <li><a  href="home.html">Home</a></li>
-      <li><a class="active" href="index.html">⭐Portfolio</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li style="float: right">
-        <a target="_blank" href=""
-          ><img
-            src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png"
-            style="width: 25px; margin: -5px"
-        /></a>
-      </li>
-      <li style="float: right">
-        <a target="_blank" href=""
-          ><img
-            src="https://img.icons8.com/win10/512/FFFFFF/instagram-new.png"
-            style="width: 25px; margin: -5px"
-        /></a>
-      </li>
-    </ul>
 
-    <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+    <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
 
-    <div class="parallax"></div>
-
-
-
-      <div class="child-flex para-1">
-        <a href="artcharacters.html">
-          <img src="covercharacterdesign.png">
-        </a>
-      </div>
-      
+    <div class="parent-flex"
+    style="width: 50%;">
       <div class="child-flex">
-        <a href="artillustrations.html">
-          <img src="coverillustration.png">
-        </a>
+        <center>
+      <img src="nameplate.png"
+      style="width:70%">
+        </center>
       </div>
-
-      <div class="child-flex para-1">
-        <a href="artphotos.html">
-          <img src="coverphotos.png">
-        </a>
-      </div>
-
       <div class="child-flex">
-        <a href="artcomic.html">
-          <img src="covercomic.png">
-        </a>
+        <a href="portfolio.html" style="font-size: 30px;">
+        Portfolio</a>
       </div>
+      <div class="child-flex">
+        <a href="resume.html" style="font-size: 30px;">Resume</a>
+      </div>
+    </div>
+    
+    <!-- slide thing --------------------------------------------- -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="index.js"> </script>
+    <div class="parent-flex"
+    style="width:40%;">
+      <div class="child-flex">
+        <div class="carousel">
+          <div class="group">
+            <img src="illustrations/rayBday.png">
+            <img src="characters/mercy.png">
+            <img src="characters/tommy.png">
+            <img src="photos/bwkings.jpeg">
+            <img src="illustrations/zailythbend.png">
+            <img src="illustrations/ethinsleep.png">
+            <img src="photos/carlos.png">
+          </div>
+        </div>
+      </div>
+    </div>
+       
 
+    
   </body>
 </html>
